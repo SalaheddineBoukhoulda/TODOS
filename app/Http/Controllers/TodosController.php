@@ -11,4 +11,12 @@ class TodosController extends Controller
         $todosModel = Todo::all();
         return view('Todos')->with('todos',$todosModel);
     }
+
+
+    public function store(Request $request){
+        $todosModel = new Todo;
+        $todosModel->todo = $request->todo;
+        $todosModel->save();
+        return redirect()->back();
+    }
 }
