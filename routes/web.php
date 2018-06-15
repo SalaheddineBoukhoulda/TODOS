@@ -43,3 +43,9 @@ Route::get('/update/todo/{id}', [
   'uses' => 'TodosController@update',
   'as' => 'todo.update'
 ]);
+
+
+Route::get('/completed/todo/{id}', [
+  'uses' => 'TodosController@complete',
+  'as' => 'todo.completed'
+]);

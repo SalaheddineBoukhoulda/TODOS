@@ -38,6 +38,13 @@ class TodosController extends Controller
         $todosModel = Todo::find($id);
         $todosModel->todo = $request->todo;
         $todosModel->update();
-        return redirect('/todos');                
+        return redirect('/todos');     
+    }
+
+    public function complete($id){
+        $todosModel = Todo::find($id);
+        $todosModel->completed = 1;
+        $todosModel->update();
+        return redirect()->back();
     }
 }
