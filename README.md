@@ -1,4 +1,4 @@
-# Project Title
+# TODOS
 
 A simple website that gives you the ability to add your todos and manage them.
 ## Getting Started
